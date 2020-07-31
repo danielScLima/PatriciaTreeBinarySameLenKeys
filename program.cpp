@@ -6,7 +6,7 @@
 
 TEST_CASE( "Testing the insert call in the patriciatreebinarysamelenkeys", "[single-file]" )
 {
-	PatriciaTreeBinarySameLenKeys tree(5);
+	PatriciaTreeBinarySameLenKeysDataStructure tree(5);
 	
 	NodeOfPatriciaTreeBinarySameLenKeys* root = tree.getRoot();
 	REQUIRE (root == nullptr);
@@ -124,7 +124,7 @@ TEST_CASE( "Testing the insert call in the patriciatreebinarysamelenkeys", "[sin
 
 TEST_CASE( "Testing the remove call in the patriciatreebinarysamelenkeys", "[single-file]" )
 {
-	PatriciaTreeBinarySameLenKeys tree(5);
+	PatriciaTreeBinarySameLenKeysDataStructure tree(5);
 	
 	REQUIRE(tree.insert("01010"));
 	REQUIRE(tree.insert("01011"));
@@ -257,7 +257,7 @@ TEST_CASE( "Testing the remove call in the patriciatreebinarysamelenkeys", "[sin
 
 TEST_CASE( "Testing the search call in the patriciatreebinarysamelenkeys", "[single-file]" )
 {
-	PatriciaTreeBinarySameLenKeys tree(5);
+	PatriciaTreeBinarySameLenKeysDataStructure tree(5);
 	
 	REQUIRE(tree.insert("01010"));
 	REQUIRE(tree.insert("01011"));
@@ -272,7 +272,7 @@ TEST_CASE( "Testing the search call in the patriciatreebinarysamelenkeys", "[sin
 
 TEST_CASE( "Testing the search call, case 2, in the patriciatreebinarysamelenkeys", "[single-file]" )
 {
-	PatriciaTreeBinarySameLenKeys tree(5);
+	PatriciaTreeBinarySameLenKeysDataStructure tree(5);
 	
 	REQUIRE(tree.insert("01010"));
 	REQUIRE(tree.insert("01011"));
