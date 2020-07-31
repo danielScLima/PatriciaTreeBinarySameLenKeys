@@ -3,7 +3,7 @@
 #include <sstream> //for std::stringstream
 #include <string>  //for std::string
 
-bool PatriciaTreeBinarySameLenKeys::insert(const std::string& data)
+bool PatriciaTreeBinarySameLenKeysDataStructure::insert(const std::string& data)
 {
     bool valid = isAValidDataIoInsert(data);
     if (valid == false)
@@ -160,7 +160,7 @@ bool PatriciaTreeBinarySameLenKeys::insert(const std::string& data)
     return true;
 }
 
-NodeOfPatriciaTreeBinarySameLenKeys *PatriciaTreeBinarySameLenKeys::search
+NodeOfPatriciaTreeBinarySameLenKeys *PatriciaTreeBinarySameLenKeysDataStructure::search
 (
     const std::string& data
 )
@@ -205,7 +205,7 @@ NodeOfPatriciaTreeBinarySameLenKeys *PatriciaTreeBinarySameLenKeys::search
     return nullptr;
 }
 
-NodeOfPatriciaTreeBinarySameLenKeys *PatriciaTreeBinarySameLenKeys::remove
+NodeOfPatriciaTreeBinarySameLenKeys *PatriciaTreeBinarySameLenKeysDataStructure::remove
 (
     const std::string& data
 )
@@ -236,7 +236,7 @@ NodeOfPatriciaTreeBinarySameLenKeys *PatriciaTreeBinarySameLenKeys::remove
     }
 }
 
-void PatriciaTreeBinarySameLenKeys::removeBranchNodeConsideringRemovedChild
+void PatriciaTreeBinarySameLenKeysDataStructure::removeBranchNodeConsideringRemovedChild
 (
     NodeLeafOfPatriciaTreeBinarySameLenKeys* removedLeaf,
     NodeBranchOfPatriciaTreeBinarySameLenKeys* branchToRemove
@@ -288,7 +288,7 @@ void PatriciaTreeBinarySameLenKeys::removeBranchNodeConsideringRemovedChild
     }
 }
 
-bool PatriciaTreeBinarySameLenKeys::isAValidDataIoInsert(const std::string& data)
+bool PatriciaTreeBinarySameLenKeysDataStructure::isAValidDataIoInsert(const std::string& data)
 {
     if (data.length() != this->lenOfKeys)
         return false;
@@ -301,12 +301,18 @@ bool PatriciaTreeBinarySameLenKeys::isAValidDataIoInsert(const std::string& data
     return true;
 }
 
-NodeOfPatriciaTreeBinarySameLenKeys *PatriciaTreeBinarySameLenKeys::getRoot()
+NodeOfPatriciaTreeBinarySameLenKeys *PatriciaTreeBinarySameLenKeysDataStructure::getRoot()
 {
     return this->root;
 }
 
-void PatriciaTreeBinarySameLenKeys::replacePointerInFather
+void PatriciaTreeBinarySameLenKeysDataStructure::clearRoot()
+{
+    //it was already cleaned
+    this->root = nullptr;
+}
+
+void PatriciaTreeBinarySameLenKeysDataStructure::replacePointerInFather
 (
     NodeBranchOfPatriciaTreeBinarySameLenKeys* father,
     NodeOfPatriciaTreeBinarySameLenKeys* oldSon,
@@ -319,12 +325,12 @@ void PatriciaTreeBinarySameLenKeys::replacePointerInFather
         father->right = newSon;
 }
 
-PatriciaTreeBinarySameLenKeys::PatriciaTreeBinarySameLenKeys(int lenOfKeys):
+PatriciaTreeBinarySameLenKeysDataStructure::PatriciaTreeBinarySameLenKeysDataStructure(int lenOfKeys):
     lenOfKeys(lenOfKeys)
 {
 }
 
-PatriciaTreeBinarySameLenKeys::~PatriciaTreeBinarySameLenKeys()
+PatriciaTreeBinarySameLenKeysDataStructure::~PatriciaTreeBinarySameLenKeysDataStructure()
 {
     if (this->root != nullptr)
     {
@@ -333,7 +339,7 @@ PatriciaTreeBinarySameLenKeys::~PatriciaTreeBinarySameLenKeys()
     }
 }
 
-bool PatriciaTreeBinarySameLenKeys::isEqualUntilPosition
+bool PatriciaTreeBinarySameLenKeysDataStructure::isEqualUntilPosition
 (
     const std::string& one,
     const std::string& two,
@@ -352,7 +358,7 @@ bool PatriciaTreeBinarySameLenKeys::isEqualUntilPosition
     return true; //they are equal until such position
 }
 
-int PatriciaTreeBinarySameLenKeys::isEqualUntilWhichPosition
+int PatriciaTreeBinarySameLenKeysDataStructure::isEqualUntilWhichPosition
 (
     const std::string& one,
     const std::string& two
@@ -377,7 +383,7 @@ int PatriciaTreeBinarySameLenKeys::isEqualUntilWhichPosition
     return max;
 }
 
-std::string PatriciaTreeBinarySameLenKeys::getPointerAsString(NodeOfPatriciaTreeBinarySameLenKeys* node)
+std::string PatriciaTreeBinarySameLenKeysDataStructure::getPointerAsString(NodeOfPatriciaTreeBinarySameLenKeys* node)
 {
     const void * address = static_cast<const void*>(node);
     std::stringstream ss;
@@ -386,7 +392,7 @@ std::string PatriciaTreeBinarySameLenKeys::getPointerAsString(NodeOfPatriciaTree
     return "\""+name+"\"";
 }
 
-void PatriciaTreeBinarySameLenKeys::getDrawInNode
+void PatriciaTreeBinarySameLenKeysDataStructure::getDrawInNode
 (
     NodeOfPatriciaTreeBinarySameLenKeys *node,
     std::string &nodesDefinition,
@@ -441,7 +447,7 @@ void PatriciaTreeBinarySameLenKeys::getDrawInNode
     }
 }
 
-const std::string PatriciaTreeBinarySameLenKeys::getGraphvizDraw()
+const std::string PatriciaTreeBinarySameLenKeysDataStructure::getGraphvizDraw()
 {
     std::string general = "digraph g{";
     std::string nodesDefinition;

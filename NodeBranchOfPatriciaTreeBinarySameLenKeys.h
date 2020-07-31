@@ -34,9 +34,11 @@ public:
     {
         left->dealockSubtree();
         delete left;
+        left = nullptr;
 
         right->dealockSubtree();
         delete right;
+        right = nullptr;
     }
 
     int index = 0; //A posição de diferença

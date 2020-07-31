@@ -9,9 +9,9 @@
 #include "NodeLeafOfPatriciaTreeBinarySameLenKeys.h"
 
 /*!
- * \brief The PatriciaTreeBinarySameLenKeys class
+ * \brief The PatriciaTreeBinarySameLenKeysDataStructure class
  */
-class PatriciaTreeBinarySameLenKeys
+class PatriciaTreeBinarySameLenKeysDataStructure
 {
 private:
     NodeOfPatriciaTreeBinarySameLenKeys* root = nullptr;
@@ -79,12 +79,12 @@ private:
     );
 public:
     /*!
-     * \brief PatriciaTreeBinarySameLenKeys
+     * \brief PatriciaTreeBinarySameLenKeysDataStructure
      * \param lenOfKeys
      */
-    PatriciaTreeBinarySameLenKeys(int lenOfKeys);
+    PatriciaTreeBinarySameLenKeysDataStructure(int lenOfKeys);
 
-    ~PatriciaTreeBinarySameLenKeys();
+    ~PatriciaTreeBinarySameLenKeysDataStructure();
 
     /*!
      * \brief getGraphvizDraw
@@ -126,6 +126,10 @@ public:
      */
     NodeOfPatriciaTreeBinarySameLenKeys *getRoot();
 
+    /*!
+     * \brief clearRoot
+     */
+    void clearRoot();
 };
 
 #endif // PATRICIA_TREE_BINARY_SAME_LEN_KEYS_H
