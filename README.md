@@ -1,5 +1,7 @@
 PatriciaTreeBinaryWithSameLenkeys
 ====================
+Building with AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/9hq9w78k98227t1j?svg=true)](https://ci.appveyor.com/project/DanielSLima/patriciatreebinarysamelenkeys)
+
 Building with Travis: [![Build Status](https://www.travis-ci.com/danielScLima/PatriciaTreeBinarySameLenKeys.svg?branch=master)](https://www.travis-ci.com/danielScLima/PatriciaTreeBinarySameLenKeys)
 
 This repository has a project with the implementation of a PatriciaTreeBinaryWithSameLenkeys.
