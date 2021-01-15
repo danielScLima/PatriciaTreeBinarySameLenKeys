@@ -1,5 +1,6 @@
 PatriciaTreeBinaryWithSameLenkeys
 ====================
+Building with Travis: [![Build Status](https://www.travis-ci.com/danielScLima/PatriciaTreeBinarySameLenKeys.svg?branch=master)](https://www.travis-ci.com/danielScLima/PatriciaTreeBinarySameLenKeys)
 
 This repository has a project with the implementation of a PatriciaTreeBinaryWithSameLenkeys.
 
